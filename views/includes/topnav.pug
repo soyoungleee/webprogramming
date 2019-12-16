@@ -11,9 +11,6 @@
                     
           li.nav-item
             a.nav-link(href="/posts") 여행상품
-          li.nav-item
-            a.nav-link(href="/users") 회원정보 목록
-         
           if (!currentUser) 
             li.nav-item
               a.nav-link(href='/signin') 로그인
@@ -22,19 +19,21 @@
           else
             li.nav-item
               a.nav-link(href=`/users/${currentUser._id}`) 마이페이지
+            
+        
+            if (currentUser)
+              if currentUser.type ==1
+                li.nav-item
+                  a.nav-link(href=`/users/${currentUser._id}`) 내 예약내역
+              else if (currentUser.type ==2)
+                li.nav-item
+                  a.nav-link(href=`/users/${currentUser._id}`) 투어가이드
+                
+              else if (currentUser.type == 3)
+                li.nav-item
+                  a.nav-link(href="/users") 회원정보 목록
+          
             li.nav-item
               a.nav-link(href='/signout') 로그아웃
-        
-            if (currentUser.type == 1)
-              li.nav-item
-                a.nav-link(href=`/users/${currentUser._id}`) 저는 일반회원입니다
-            else if (currentUser._type == 2)
-              li.nav-item
-                a.nav-link(href=`/users/${currentUser._id}`) 저는 투어가이드 입니다
-                
-            else
-              li.nav-item
-                a.nav-link(href=`/users/${currentUser._id}`) 저는 관리자 입니다
 
-          
           

@@ -1,0 +1,92 @@
+extends layout
+      
+
+//- block hero-unit
+//-   .jumbotron
+//-     .container
+
+
+
+
+block content
+
+  .container
+    form.form-inline.search-input-group(action='/posts', method='GET')
+      i.fa.fa-search
+      input.form-control.mr-sm-2(type='text', name='term', placeholder='어디로 떠나세요?', aria-label='Search', value=term)
+
+
+
+
+
+
+
+
+  .container
+        .row
+          .col-3
+            .card
+              img.card-img-top(src="/images/liverpool.jpg", alt="리버풀")
+              .card-body
+                h5.card-title 리버풀
+                p.card-text
+                  | 홍대 봉황당으로 만족하실겁니까? 현지에서 부르는 YNWA를 함께 부를 준비 됐나요?
+                a.btn.btn-primary(href='/posts/5df6068ca096d01ce050c2a8') 예약하기
+          .col-3
+            .card
+              img.card-img-top(src="/images/manchester.jpg", alt="멘체스터")
+              .card-body
+                h5.card-title 맨체스터
+                p.card-text
+                  | 맨체스터와 멘시티 등 많은 팀들을 볼 수 있는 맨체스터! 지금이 기회입니다!
+                a.btn.btn-primary(href='/posts/5df60730a096d01ce050c2a9') 예약하기
+          .col-3
+            .card
+              img.card-img-top(src="/images/london.jpg", alt="런던")
+              .card-body
+                h5.card-title 런던  
+                p.card-text
+                  | 첼시팬, 토트넘 팬 다 들어와! 우리 쏘니 현장에서 직접 볼 수 있는 기회 놓치지 말아요!
+                a.btn.btn-primary(href='/posts/5df6074aa096d01ce050c2aa') 예약하기
+          .col-3
+            .card
+              img.card-img-top(src='/images/hongkong.jpg', alt='홍콩')
+              .card-body
+                h5.card-title 홍콩
+                p.card-text
+                  | 밤낮이 매력적인 도시, 홍콩! 홍콩과 마카오를 동시에 즐길 수 있는 기회!
+                a.btn.btn-primary(href='/posts/5df6345aa096d01ce050c2ab') 예약하기
+        .row
+          .col-3
+            .card
+              img.card-img-top(src='/images/aust.jpg', alt='호주')
+              .card-body
+                h5.card-title 호주
+                p.card-text
+                  | 캥거루와 함께하는 호주여행
+                a.btn.btn-primary(href='/posts/5df6346ca096d01ce050c2ac') 예약하기
+          .col-3
+            .card
+              img.card-img-top(src='/images/taiwan.jpg', alt='대만')
+              .card-body
+                h5.card-title 대만
+                p.card-text
+                  | 낭만의 도시 대만의 매력 속으로
+                a.btn.btn-primary(href='/posts/5df63484a096d01ce050c2ad') 예약하기
+          .col-3
+            .card
+              img.card-img-top(src='/images/guam.jpg', alt='괌')
+              .card-body
+                h5.card-title 괌
+                p.card-text
+                  | 남녀노소 모두 즐길 수 있는 휴양지 TOP of TOP
+                a.btn.btn-primary(href='/posts/5df63493a096d01ce050c2ae') 예약하기
+          .col-3
+            .card
+              img.card-img-top(src='/images/boracay.jpg', alt='보라카이')
+              .card-body
+                h5.card-title 보라카이
+                p.card-text
+                  | 사랑하는 사람과 함꼐 아름다운 화이트비치로
+                a.btn.btn-primary(href='/posts/5df634bba096d01ce050c2af') 예약하기
+

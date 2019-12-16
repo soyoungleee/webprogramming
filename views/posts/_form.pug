@@ -1,0 +1,17 @@
+.form-group
+  label(for="title") 제목
+  input.form-control(type="text", name="title", placeholder="게시글의 제목을 입력해주세요", value=post.title)
+.form-group
+  label(for="post") 내용
+  textarea.form-control(name="content", rows="5")= post.content
+.form-group
+  label(for="tags") 태그
+  input.form-control(type="text", name="tags", placeholder="태그를 입력해주세요", value=post.tags ? post.tags.join(" ") : "")
+
+
+.form-group
+  label(for="img") 사진
+  input.form-control(type='file', accept='img/*', required='', multiple='')
+  button.browse-btn &#xC0AC;&#xC9C4;&#xC5C5;&#xB85C;&#xB4DC;
+
+

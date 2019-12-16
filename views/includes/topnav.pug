@@ -1,0 +1,40 @@
+.header.clearfix
+  nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+    .container
+      a.navbar-brand(href="/") TravelBible
+      button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarsExampleDefault", aria-controls="navbarsExampleDefault", aria-expanded="false", aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+
+      #navbarsExampleDefault.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+        
+                    
+          li.nav-item
+            a.nav-link(href="/posts") 여행상품
+          li.nav-item
+            a.nav-link(href="/users") 회원정보 목록
+         
+          if (!currentUser) 
+            li.nav-item
+              a.nav-link(href='/signin') 로그인
+
+               
+          else
+            li.nav-item
+              a.nav-link(href=`/users/${currentUser._id}`) 마이페이지
+            li.nav-item
+              a.nav-link(href='/signout') 로그아웃
+        
+            if (currentUser.type == 1)
+              li.nav-item
+                a.nav-link(href=`/users/${currentUser._id}`) 저는 일반회원입니다
+            else if (currentUser._type == 2)
+              li.nav-item
+                a.nav-link(href=`/users/${currentUser._id}`) 저는 투어가이드 입니다
+                
+            else
+              li.nav-item
+                a.nav-link(href=`/users/${currentUser._id}`) 저는 관리자 입니다
+
+          
+          
